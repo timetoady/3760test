@@ -1,0 +1,40 @@
+body {
+    background-color: black;
+    color: #DDD;
+    padding: 10px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.scene {
+    border: white ridge 6px;
+    padding: 1rem;
+}
+
+.scene img {width: 100%}
+
+#search{
+    margin: 1rem 0;
+    min-width: 35%;
+    max-width: 100%;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    main{
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    main{
+        grid-template-columns: 1fr;
+    }
+
+}
