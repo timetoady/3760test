@@ -1,7 +1,6 @@
 //Here's the main URL I'm drawing the info from
 gamesURL = "https://rawg-video-games-database.p.rapidapi.com/platforms"
 
-
 //The fetch we built to send to the filter to get just tha data we want.
 fetch(gamesURL, {
   "method": "GET",
@@ -50,8 +49,11 @@ function domFilter(data) {
       results.name === "Genesis"  ||
       results.name === "SEGA Master System"  ||
       results.name === "Android"  ||
-      results.name === "iOS"  
-    
+      results.name === "iOS" ||
+      results.name === "Commodore / Amiga" ||
+      results.name === "Atari 5200" || 
+      results.name === "Atari Flashback" ||
+      results.name === "SEGA CD" 
     )
     domBuilder(owned)
     return owned

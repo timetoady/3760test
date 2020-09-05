@@ -10,6 +10,11 @@ main {
     gap: 30px;
 }
 
+header h1{
+    font-size: 3rem;
+    margin-bottom: .6rem;
+}
+
 .scene {
     border: white ridge 6px;
     padding: 1rem;
@@ -25,16 +30,23 @@ main {
     font-size: 1.5rem;
 }
 
-@media screen and (max-width: 768px) {
-    main{
-        grid-template-columns: 1fr 1fr;
-    }
+footer p{
+    font-size: .6rem;
+    color: #AAA;
+    text-align: center;
+}
 
+@media screen and (max-width: 768px) {
+    main{grid-template-columns: 1fr 1fr;}
+    
 }
 
 @media screen and (max-width: 500px) {
-    main{
-        grid-template-columns: 1fr;
+    main{grid-template-columns: 1fr;}
+    header h1{font-size: 1.4rem;}
+    #search{
+        padding: .2rem;
+    font-size: 1rem;
+    width: 100%;
     }
-
 }
