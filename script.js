@@ -61,7 +61,7 @@ function domFilter(data) {
 }
 
 //Launched from domFilter, it builds the pieces of the DOM.
-function domBuilder(owned, field = "main") {
+function domBuilder(owned, field = ".stage") {
   let main = document.querySelector(field)
   owned.forEach(platform => {
     let theCard = document.createElement("div");
@@ -98,26 +98,14 @@ searchField.addEventListener('input', () => {
     owned.games_count.toString().includes(searchField.value.toString()) 
     
   )
+  let stage = document.querySelector(".stage")
   let main = document.querySelector("main")
-  main.remove()
-  let main2 = document.createElement("main")
-  body.appendChild(main2)
+  stage.remove()
+  let stage2 = document.createElement("div")
+  stage2.setAttribute('class', "stage")
+  main.appendChild(stage2)
   domBuilder(searchFilter)
 })
-
-
-//Use filter to search dom entries when loaded.
-
-// let topFunc = (staticNum) => {
-//   let nestedFunc = () => {
-//       let innerMost = (number) => {
-//           return number * staticNum
-//       }
-//   }
-
-//   return innerMost(number)
-// }
-
 
 
 
